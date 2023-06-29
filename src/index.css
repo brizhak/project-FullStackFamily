@@ -1,0 +1,28 @@
+@import './css/common.css';
+@import './css/styles.css';
+@import './css/mobile.css';
+@import './css/tablet.css';
+@import './css/desktop.css';
+
+@font-face {
+    font-family: 'DM Sans Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/DMSans-Regular.ttf') format('truetype');
+  }
+  
+@font-face {
+    font-family: 'DM Sans Italic';
+    font-weight: 400;
+    src: url('./fonts/DMSans-Italic.ttf') format('truetype');
+}
+  
+@font-face {
+    font-family: 'DM Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/DMSans-Bold.ttf') format('truetype');
+}
+
+
+
