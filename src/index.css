@@ -9,7 +9,7 @@
     font-style: normal;
     font-weight: 400;
     src: url('./fonts/DMSans-Regular.ttf') format('truetype');
-  }
+}
   
 @font-face {
     font-family: 'DM Sans Italic';
@@ -24,5 +24,11 @@
     src: url('./fonts/DMSans-Bold.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'DM Sans Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: url('./fonts/DMSans-Medium.ttf') format('truetype');
+}
 
 
