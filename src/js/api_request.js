@@ -18,7 +18,7 @@ export async function fetchTopBooks() {
     try {
         const { data } = await axios.get('https://books-backend.p.goit.global/books/top-books');
         let books = await data.map(category => category.books);
-
+        
         return books;
     } catch (error) {
         console.log(error);

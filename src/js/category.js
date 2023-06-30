@@ -6,9 +6,10 @@ const h1El = document.querySelector('.title-category');
 
 allCategorys();
 
-function allCategorys() {
-fetchTopBooks().then((topBooks) => {
-  topBooks.map(({ books }) => { 
+async function allCategorys() {
+await fetchTopBooks().then((topBooks) => {
+  topBooks.map(( books ) => { 
+    console.log(books)
     renderTopBooks(books)
   })
     }).catch((error) => {
@@ -21,8 +22,8 @@ fetchTopBooks().then((topBooks) => {
 
 addCategorys();
 
-function addCategorys() {
-  fetchCategoryList()
+async function addCategorys() {
+  await fetchCategoryList()
     .then((categorys) => {
       renderCategorys(categorys);
 
@@ -59,7 +60,7 @@ function onSelectCategory(evt) {
   h1El.innerHTML = category;
   fetchCertainCategory(category)
     .then((books) => {
-      console.log(books);
+      
       renderBooks(books)
   
     }).catch((error) => {
