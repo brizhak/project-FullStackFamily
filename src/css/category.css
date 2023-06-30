@@ -1,5 +1,4 @@
 p {
-    margin: 0;
     padding: 0;
 }
 
@@ -7,9 +6,9 @@ p {
     display: flex;
     gap: 20px;
     overflow-y: scroll;
-    width: 335px;
+    width: 307px;
     height: 228px;
-
+    margin: 0 auto;
 }
 
 .categorys::-webkit-scrollbar {
@@ -43,15 +42,23 @@ p {
     line-height: 18px;
     letter-spacing: -0.32px;
 }
-
+.title-category {
+    margin-bottom: 40px;
+}
+.title-secondary {
+    color: #4F2EE8;
+}
+.books-category {
+    margin: 0 auto;
+}
 .book-carts {
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
     width: 335px;
     height: 535px;
-    margin-bottom: 40px;
 }
 
 .book-img {
