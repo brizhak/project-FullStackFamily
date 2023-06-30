@@ -39,3 +39,13 @@ export async function fetchCertainCategory(selectedCategory) {
     }
 }
 
+
+export async function fetchSelectedBook(bookId) {
+    try {
+        let resp = await axios.get(`https://books-backend.p.goit.global/books/${bookId}`)
+        let book = await resp.data;
+        return book;
+    } catch (error) {
+        console.log(error)
+    }
+}
