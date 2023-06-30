@@ -5,20 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Shelf</title>
     <link rel="stylesheet" href="./index.css" />
-    <!-- <link rel="stylesheet" href="./css/category.css" /> -->
     <script type="module" src="./index.js"></script>
   </head>
   <body>
     <header></header>
     <main>
-      <!-- <div class="categorys">
-        <ul class="category-list"></ul>
+      <div class="categorys">
+        <ul class="category-list">
+          <li>
+            <a href="#" class="category-link">All categories</a>
+          </li>
+        </ul>
       </div>
       <h1 class="title-category">Best Sellers Books</h1>
-      <div class="books-category"></div> -->
+      <div class="books-category"></div>
+      -->
       <include src="./partials/shopping-list-section.html"></include>
     </main>
-    <footer></footer>
-    <!-- <script src="category.js" type="module"></script> -->
+    <footer>
+      <div class="logo-and-form">
+        <div class="logo-footer">
+          <a href="./index.html">
+            <svg width="110" height="28">
+              <use href="./img/icons.svg#icon-logo-foot"></use>
+            </svg>
+          </a>
+        </div>
+        <form class="footer-form" name="subscribe-form" autocomplete="off">
+          <label class="subscribe-label" for="subscribe-mail"
+            >Get notified about new books</label
+          >
+          <div class="input-container">
+            <input
+              class="subscribe-input"
+              type="email"
+              id="subscribe-mail"
+              name="subscribe-mail"
+              placeholder="E-mail"
+            />
+            <button class="btn subscribe-btn" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <p class="footer-rights">&#169; 2023 Bookshelf / All rights reserved</p>
+    </footer>
   </body>
 </html>
