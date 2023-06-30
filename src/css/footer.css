@@ -1,5 +1,6 @@
 footer {
     padding: 20px;
+    background-color:var(--main-accent-color);
 }
 
 .logo-and-form {
@@ -19,6 +20,7 @@ footer {
     font-family: 'DM Sans Bold';
     font-size: 14px;
     text-transform: uppercase;
+    color: #fff;
 }
 .input-container {
     display: flex;
@@ -27,14 +29,18 @@ footer {
     gap: 10px;
 }
 .subscribe-input {
+    background-color: #111;
     border: none;
-    border: 2px solid #111;
-    border-radius: 40;
+    border: 2px solid;
+    border-radius: 40px;
     height: 46px;
     padding: 0 25px;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out;
 }
-.subscribe-input:focus, .subscribe-input:hover, .subscribe-input:active {
-    border-color: var(--main-accent-color);
+.subscribe-input:focus, .subscribe-input:hover {
+    border-color: transparent;
+    
 }
 .subscribe-btn {
     display: block;
@@ -45,10 +51,14 @@ footer {
     font-family: 'DM Sans Bold';
     font-size: 16px;
     text-transform: uppercase;
-    color: var(--main-accent-color);
+    color: #fff;
     text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+.subscribe-btn:focus, .subscribe-btn:hover, .subscribe-btn:active {
+    color: var(--secondary-color);
 }
 .footer-rights {
     margin-top: 30px;
-    color: var(--main-color);
+    color: rgba(255, 255, 255, 0.6);
 }
