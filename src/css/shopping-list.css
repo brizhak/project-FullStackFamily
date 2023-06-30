@@ -1,0 +1,76 @@
+.shopping-list-section {
+}
+
+.shopping-list-container {
+}
+.shopping-list-title {
+  color: var(--secondary-color);
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -1.28px;
+}
+.title-blue {
+  color: var(--main-accent-color);
+}
+.shopping-list-list {
+}
+.shop-cart-container {
+  padding: 14px;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+}
+.shop-cart-wrap {
+}
+.shop-image-wrapper {
+}
+.shop-image {
+}
+.shop-cart-info {
+}
+.shop-cart-title {
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-family: DM Sans;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+.shop-cart-category {
+  color: #b4afaf;
+  font-size: 12px;
+  font-family: DM Sans;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.36px;
+}
+.shop-cart-description {
+  overflow: hidden;
+  color: #111;
+  text-overflow: ellipsis;
+  whitespace: nowrap;
+  font-size: 14px;
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+}
+.shop-cart-bottom-wrap {
+}
+.shop-cart-author {
+}
+.shop-cart-media {
+}
+.shop-cart-media-item {
+}
+.amazon-picture {
+}
+.media-icon {
+}
+.amazon-icon {
+}
+.shop-cart-btn {
+}
+.shop-cart-btn-trash {
+}
