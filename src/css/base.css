@@ -1,11 +1,9 @@
 :root {
-  --black: #111111;
-  --black-light: #202024;
-  --blue: #4f2ee8;
-  --yellow: #eac645;
-  --white: #ffffff;
-
-  
+  --main-accent-color: #4F2EE8;
+  --secondary-accent-color: #EAC645;
+  --main-color: rgba(0, 0, 0, 0.6);
+  --secondary-color: #111;
+  --main-bg-color: #fff;
 }
 
 html {

@@ -1,8 +1,7 @@
 @import './css/common.css';
-@import './css/styles.css';
-@import './css/mobile.css';
-@import './css/tablet.css';
-@import './css/desktop.css';
+@import './css/base.css';
+@import './css/reset.css';
+
 
 @font-face {
     font-family: 'DM Sans Regular';
