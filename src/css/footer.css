@@ -1,0 +1,54 @@
+footer {
+    padding: 20px;
+}
+
+.logo-and-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.subscribe-label {
+    font-family: 'DM Sans Bold';
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.subscribe-input {
+    border: none;
+    border: 2px solid #111;
+    border-radius: 40;
+    height: 46px;
+    padding: 0 25px;
+}
+.subscribe-input:focus, .subscribe-input:hover, .subscribe-input:active {
+    border-color: var(--main-accent-color);
+}
+.subscribe-btn {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    background-color: transparent;
+    border: none;
+    font-family: 'DM Sans Bold';
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--main-accent-color);
+    text-decoration: underline;
+}
+.footer-rights {
+    margin-top: 30px;
+    color: var(--main-color);
+}
