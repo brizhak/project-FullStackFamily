@@ -1,3 +1,4 @@
+import Notiflix from 'notiflix';
 const axios = require('axios').default;
 
 
@@ -9,7 +10,7 @@ export async function fetchCategoryList() {
         return data;
 
     } catch (error) {
-        console.log(error);
+        Notiflix.Notify.failure('Something went wrong. Please try again');
     }
 }
 
@@ -21,7 +22,7 @@ export async function fetchTopBooks() {
         
         return books;
     } catch (error) {
-        console.log(error);
+        Notiflix.Notify.failure('Something went wrong. Please try again');
     }
 }
 
@@ -35,7 +36,7 @@ export async function fetchCertainCategory(selectedCategory) {
         })
         return data;
     } catch (error) {
-        console.log(error);
+        Notiflix.Notify.failure('Something went wrong. Please try again');
     }
 }
 

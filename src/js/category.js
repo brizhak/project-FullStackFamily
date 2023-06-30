@@ -1,4 +1,5 @@
 import { fetchCategoryList, fetchTopBooks, fetchCertainCategory } from "./api_request";
+import Notiflix from 'notiflix';
 
 const categoryEl = document.querySelector('.category-list');
 const booksCategoryEl = document.querySelector('.books-category');
@@ -8,32 +9,15 @@ allCategorys();
 
 async function allCategorys() {
 await fetchTopBooks().then((topBooks) => {
-  topBooks.map(( books ) => { 
-    console.log(books)
-    renderTopBooks(books)
-  })
-    }).catch((error) => {
-      console.log(error);
-      errorShow();
-    })
-    .finally(() => {
-    }); 
+  topBooks.map(( books ) =>  
+    renderTopBooks(books))});
 };
 
 addCategorys();
 
 async function addCategorys() {
   await fetchCategoryList()
-    .then((categorys) => {
-      renderCategorys(categorys);
-
-    }).catch((error) => {
-      console.log(error);
-      errorShow();
-    })
-    .finally(() => {
-
-    });
+    .then((categorys) => renderCategorys(categorys));
 };
 
 function renderCategorys(arr) {
@@ -64,11 +48,10 @@ function onSelectCategory(evt) {
       renderBooks(books)
   
     }).catch((error) => {
-      console.log(error);
-      errorShow();
-    })
-    .finally(() => {
+      Notiflix.Notify.failure('Something went wrong. Please try again');
+     
     });
+    
 }
 
 function renderBooks(arr) {
@@ -76,7 +59,7 @@ function renderBooks(arr) {
     .map(({book_image, author, title}) => {
       return `
       <div class="book-carts"> 
-      <img src="${book_image}" alt="${title}" class="book-img">
+      <img src="${book_image}" alt="${title}" class="book-img" loading="lazy" width=335>
       <div class="book-title"> 
       <p>${title}</p>
         <p>${author}</p>
