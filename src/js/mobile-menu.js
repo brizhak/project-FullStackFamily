@@ -19,7 +19,9 @@
 
   const addMenuEventListeners = () => {
     openMenuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
+    if (closeMenuBtn) {
+      closeMenuBtn.addEventListener('click', toggleMenu);
+    }
     mobileMenuLinks.forEach(link => {
       link.addEventListener('click', toggleMenu);
     });

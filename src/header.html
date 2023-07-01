@@ -1,12 +1,21 @@
-<header class="header">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header class="header">
     <div class="container">
         <div class="header-container">
             <a class="header-logo" href="./index.html">
-                <svg class="header_logo-icon" width="24" height="24">
+                <svg class="header_logo-icon" width="109" height="28">
                 <use href="./img/icons.svg#icon-logo"></use>
                 </svg>
-                <span class="logo-name">Bookshelf</span>
-            </a>
+                <!-- <span class="logo-name">Bookshelf</span>
+            </a> -->
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item">
@@ -26,6 +35,15 @@
                     <span class="slider circle"></span>
                 </label>
             </span>
+
+            <a href="#" id="header-signup" class="sign-up">
+                Sign up
+                <svg class="arrow-right" width="20" height="20">
+          <use href="./img/icons.svg#icon-arrow-right"></use>
+        </svg>
+      </a>
+
+    </div>
         </div>
         <button class="js-open-menu" id="btn-hamburger" aria-label="burger-menu">
             <svg class="button-hamburger is-open" width="28" height="28">
@@ -35,6 +53,7 @@
         </nav>
         </div>
     </div>
+</header>
     <!-- Mobile Menu -->
 <div class="mobile-menu js-menu-container">
     <div class="container mobile-menu_container mobile-menu_thumb">
@@ -53,7 +72,8 @@
 </div>
     <img class="mobile-menu_img" src="./img/books-min.png" alt="books">
 </div>
-</header>
-
+ <script type="module" src="./index.js"></script>
+  </body>
+</html>
 
 
