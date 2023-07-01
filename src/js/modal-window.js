@@ -11,7 +11,7 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
       <div class="modal-body-card">
         <div class="modal-body-image">
           <img
-            src="./img/template.jpg"
+            src=""
             alt="#"
             class="modal-body-image-poster"
             width="287"
@@ -101,11 +101,32 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
     </div>
   </div>`;
 
-let bodyEl = document.getElementById('root');
+let bodyEl = document.getElementById('modalId');
 let openModal = document.getElementById('openBtn');
 
 function openModalWindow() {
   bodyEl.insertAdjacentHTML('afterbegin', MODAL_TEMPLATE);
+  let closeButton = document.querySelector('.modal-close-btn');
+  let modalWrapper = document.querySelector('.modal-wrapper');
+  closeButton.addEventListener('click', closeModal);
+  modalWrapper.addEventListener('click', handleClickOutside);
+  document.addEventListener('keydown', handleKeyDown);
+}
+
+function closeModal() {
+  document.querySelector('.modal-wrapper').remove();
+}
+
+function handleKeyDown(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+
+function handleClickOutside(event) {
+  if (!event.target.closest('.modal-body')) {
+    closeModal();
+  }
 }
 
 openModal.addEventListener('click', openModalWindow);
