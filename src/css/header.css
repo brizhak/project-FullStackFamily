@@ -202,6 +202,38 @@ input:checked + .circle::before {
   background-color: #fff;
 }
 
+/*sign up*/
+
+@media (max-width: 767px) {
+  .sign-up {
+    display: none;
+  }
+}
+
+.sign-up {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 184px;
+  padding: 12px 14px;
+  text-decoration: none;
+  background: #4f2ee8;
+  border: 1.5px solid #111111;
+  border-radius: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sign-up:hover,
+.sign-up:focus {
+  color: var(--yellow-color);
+  border-color: var(--yellow-color);
+}
+
 /*mobile menu*/
 
 .mobile-menu {
