@@ -7,7 +7,7 @@ import './js/shopping-list-section';
 
 import './js/category';
 
-import './js/mobile-menu';
-import './js/open-menu';
+import './js/mobile-menu.js';
+import './js/open-menu.js';
 
 
