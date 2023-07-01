@@ -1,6 +1,14 @@
 import Notiflix from 'notiflix';
 const axios = require('axios').default;
 
+//Копіюйте собі ці імпорти якщо потрібнні запити (перевіряйте путі до свого файлу js)
+
+// import { fetchCategoryList } from './js/api_request';
+// import { fetchTopBooks } from './js/api_request';
+// import { fetchCertainCategory } from './js/api_request';
+// import { fetchSelectedBook } from './js/api_request';
+
+
 
 export async function fetchCategoryList() {
 
@@ -19,7 +27,7 @@ export async function fetchTopBooks() {
     try {
         const { data } = await axios.get('https://books-backend.p.goit.global/books/top-books');
         let books = await data.map(category => category.books);
-        
+
         return books;
     } catch (error) {
         Notiflix.Notify.failure('Something went wrong. Please try again');
