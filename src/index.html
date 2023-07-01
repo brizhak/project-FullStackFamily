@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,21 +8,21 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <header>
-      
-    </header>
+    <header></header>
     <main>
       <section class="categorys container">
         <ul class="category-list">
           <li>
-            <a href="#" class="category-link">All categories</a>            
+            <a href="#" class="category-link">All categories</a>
           </li>
         </ul>
+      </div>
       </section>
       <section class="list-of-books container">
         <h1 class="title-category">Best Sellers <span class="title-secondary">Books</span></h1>
         <div class="books-category"></div>
       </section>
+       <!-- <include src="./partials/shopping-list-section.html"></include> -->
     </main>
     <footer>
       <div class="logo-and-form">
@@ -35,17 +34,22 @@
           </a>
         </div>
         <form class="footer-form" name="subscribe-form" autocomplete="off">
-          <label class="subscribe-label" for="subscribe-mail">Get notified about new books</label>
+          <label class="subscribe-label" for="subscribe-mail"
+            >Get notified about new books</label
+          >
           <div class="input-container">
-            <input class="subscribe-input" type="email" id="subscribe-mail" name="subscribe-mail" placeholder="E-mail">
+            <input
+              class="subscribe-input"
+              type="email"
+              id="subscribe-mail"
+              name="subscribe-mail"
+              placeholder="E-mail"
+            />
             <button class="btn subscribe-btn" type="submit">Subscribe</button>
-          </div>    
+          </div>
         </form>
       </div>
-      <p class="footer-rights">&#169; 2023 Bookshelf / All rights reserved </p>
+      <p class="footer-rights">&#169; 2023 Bookshelf / All rights reserved</p>
     </footer>
   </body>
 </html>
-
-
-
