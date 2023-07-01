@@ -1,0 +1,2 @@
+var themeToggleBtn=document.querySelector(".switch"),theme=localStorage.getItem("theme");theme&&document.body.classList.add("dark-mode"),handleThemeToggle=function(){document.body.classList.toggle("dark-mode"),document.body.classList.contains("dark-mode")?localStorage.setItem("theme","dark-mode"):localStorage.removeItem("theme","")},themeToggleBtn.addEventListener("click",handleThemeToggle);
+//# sourceMappingURL=dark.682d374f.js.map
