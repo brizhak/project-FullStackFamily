@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Shelf</title>
     <link rel="stylesheet" href="./index.css" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <header></header>
+    <header>
+      <include src="./header.html"></include>
+    </header>
     <main>
       <section class="categorys container">
         <ul class="category-list">
@@ -22,8 +23,15 @@
         <h1 class="title-category">Best Sellers <span class="title-secondary">Books</span></h1>
         <div class="books-category"></div>
       </section>
+
        <include src="./partials/shopping-list-section.html"></include>
        <include src="./partials/modal-window.html"></include>
+
+       <!-- <include src="./partials/shopping-list-section.html"></include> -->
+      <section>
+        <span class="loader is-hidden"></span>
+      </section>
+
     </main>
     <footer>
       <div class="logo-and-form">
@@ -52,5 +60,6 @@
       </div>
       <p class="footer-rights">&#169; 2023 Bookshelf / All rights reserved</p>
     </footer>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
