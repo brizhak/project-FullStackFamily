@@ -18,3 +18,85 @@ transition: color .3s ease-in-out,
     fill .3s ease-in-out,
     transform .3s ease-in-out;
 }
+.dark  .dark-background {
+    background-color:var(--main-bg-color);
+}
+
+.dark li {
+    color: var(--secondary-color);
+}
+
+.dark .book-title {
+    color: var(--main-color);
+}
+
+.dark h1,
+.dark h3 {
+    color:var(--secondary-color);
+}
+
+.dark .category-link:hover,
+.dar .category-link:focus {
+    color: var(--secondary-accent-color);
+}
+
+.dark.category-list::-webkit-scrollbar-thumb {
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, var(--secondary-accent-color) 18.03%, var(--secondary-color) 100%);
+}
+
+.dark.header-container{
+    background: var(--main-bg-color);
+}
+
+.dark .logo-name,
+.dark .modal-close-btn {
+    fill: var(--secondary-color);
+}
+
+.dark .shoppList,
+.dark .counterPoint {
+    color: var(--secondary-color);  
+}
+
+.dark .cardBodyMod {
+    color: var(--secondary-color);
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--secondary-color);
+}
+
+
+.dark .closeBtnMod {
+    fill: var(--secondary-color);
+}
+.dark .titleCardMod {
+    color: var(--secondary-color);
+}
+.dark .descriptionCardMod {
+    color:  var(--secondary-color);
+}
+.dark .addShoppList {
+    color: var(--secondary-color);
+}
+.dark .imgMarketPlaceAmazon {
+    filter: invert(98%) sepia() saturate(0%) hue-rotate(105deg) brightness(103%) contrast(102%);
+}
+.dark .imgMarketPlace:hover,
+.dark .imgMarketPlace:focus {
+    filter: invert(98%) sepia() saturate(0%) hue-rotate(105deg) brightness(103%) contrast(102%);
+}
+.dark .loader {
+    border: 10px solid rgba(234, 198, 69, .6);
+    border-left-color: var(--secondary-accent-color);
+}
+
+.dark .nav-link {
+    color: var(--secondary-color);
+}
+
+.dark .title-category {
+    color: var(--secondary-color);
+}
+
+.dark .see_more {
+    color: var(--secondary-color);
+}
