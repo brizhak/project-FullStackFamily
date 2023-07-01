@@ -31,3 +31,4 @@
 
   window.matchMedia('(min-width: 768px)').addEventListener('change', closeMenuOnOrientationChange);
 })();
+
