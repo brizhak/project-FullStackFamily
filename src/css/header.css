@@ -128,6 +128,15 @@
 /*button hamburger + toggle*/
 
 .js-open-menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .js-open-menu {
+    display: block;
+  }
+}
+.js-open-menu {
   margin-left: 14px;
   border: none;
   outline: 0;
@@ -207,6 +216,12 @@ input:checked + .circle::before {
 @media (max-width: 767px) {
   .sign-up {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-up {
+    display: block;
   }
 }
 
