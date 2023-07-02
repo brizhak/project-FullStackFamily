@@ -41,6 +41,8 @@
 
 .modal-body-image {
   margin-bottom: 14px;
+  width: 287px;
+  height: 408px;
 }
 
 .modal-body-title {
@@ -54,7 +56,7 @@
   margin-bottom: 4px;
 }
 
-.modal-body-author {
+.modal-body-autor {
   color: #b4afaf;
   font-size: 12px;
   font-family: DM Sans;
