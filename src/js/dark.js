@@ -1,5 +1,3 @@
-export  function darkMode() {
-
 const btnDarkMode = document.querySelector(".switch");
 
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -41,5 +39,4 @@ btnDarkMode.onclick = function () {
     } else {
         localStorage.setItem("darkMode", "light");
     }
-    }    
 };
