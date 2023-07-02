@@ -1,4 +1,4 @@
-// // const menuBtn = document.getElementById('btn-hamburger');
+/* // // const menuBtn = document.getElementById('btn-hamburger');
 // // menuBtn.onclick = function (e) {
 // //     animatedMenu(this);
 // //     e.preventDefault();
@@ -70,4 +70,4 @@ function updateUIOnLogout() {
 }
 
 // Приклад виклику функції updateUIOnLogin() після успішної авторизації користувача
-updateUIOnLogin();
+updateUIOnLogin(); */

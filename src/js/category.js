@@ -112,7 +112,7 @@ function renderTopBooks(arr) {
   const markupMobile = markupBook.slice(0, 1).join("");
   const markupLaptop = markupBook.slice(0, 3).join("");
   const markupDesktop = markupBook.slice(0, 5).join("");
-  console.log(markupLaptop);
+  
   let markup = '';
   if (screenWidth < 767) {
     
@@ -126,7 +126,6 @@ function renderTopBooks(arr) {
   //  markup = markupBook + markupBtn;
 
   return booksCategoryEl.insertAdjacentHTML('beforeend', markup);
-
 
 }
 

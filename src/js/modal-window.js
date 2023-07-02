@@ -1,4 +1,4 @@
- import amazon from '../img/shopping/amazon.png';
+ /* import amazon from '../img/shopping/amazon.png';
  import apple from '../img/shopping/apple.png';
  import bookshop from '../img/shopping/bookshop.png';
 
@@ -111,6 +111,7 @@
    document.addEventListener('keydown', handleKeyDown);
  }
 
+
  function closeModal() {
    document.querySelector('.modal-wrapper').remove();
  }
@@ -128,3 +129,4 @@
  }
  
 openModal.addEventListener('click', openModalWindow); 
+ */
