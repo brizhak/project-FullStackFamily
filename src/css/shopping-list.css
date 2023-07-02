@@ -1,3 +1,13 @@
+@import './common.css';
+@import './reset.css';
+@import './fonts.css';
+@import './base.css';
+@import './header.css';
+@import './support.css';
+@import './shopping-list.css';
+@import './modal-window.css';
+@import './footer.css';
+
 .shopping-list-title {
   color: var(--secondary-color);
   font-size: 32px;

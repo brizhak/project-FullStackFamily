@@ -3,6 +3,7 @@
     /* common color */
 
     /* color-text */
+
     --color-modal-icon: #111;
     --color-modal-icon-close: #4f2ee8;
     /* --color-modal-input: #8E8F99; */
@@ -22,6 +23,7 @@
     /* --bg-color-btn-modal-submit: #4D5AE5; */
     /* --bg-color-btn-modal-submit-hover: #404BBF; */
 
+
     /* border-color */
 
     --brd-color-modal-input: rgba(33, 33, 33, 0.2);
@@ -33,6 +35,7 @@
     /* transition, animation */
     --transition-property: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /* .visually-hidden {
     position: absolute;
@@ -48,6 +51,7 @@
 } */
 
 /* ------------------------------------- Modal windows -- */
+
 
 .overlay {
     position: fixed;
@@ -67,6 +71,7 @@
 }
 
 /* 
+
 .backdrop {
     position: fixed;
     top: 0;
@@ -77,6 +82,7 @@
     background-color: var(--bg-color-backdrop);
 
     transition: opacity var(--transition-property), visibility var(--transition-property);
+
 } */
 
 .modal.active {
@@ -117,11 +123,14 @@
     min-height: 516px;
     padding: 80px 40px 40px 40px;
 
+
     transform: translate(-50%, 0%) scaleY(1) skew(0);
 
     background-color: var(--bg-color-modal);
+
     border-radius: 18px;
     /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2); */
+
 
     transition: transform var(--transition-property);
 }
@@ -164,6 +173,7 @@
 
 .btn-modal-close {
     --size: 28px;
+
     width: var(--size);
     height: var(--size);
 
@@ -262,6 +272,7 @@
     stroke: var(--bg-color-btn-modal-active);
     fill: var(--bg-color-modal);
 }
+
 
 .btn-modal-submit {
     display: block;
