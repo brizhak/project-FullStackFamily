@@ -1,4 +1,5 @@
-import { ModalAuth } from './modal-auth.js';
+import { openModalAuth } from './modal-auth.js';
+import { handleThemeToggle } from './dark.js';
 
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
@@ -6,8 +7,10 @@ import { ModalAuth } from './modal-auth.js';
   const closeMenuBtn = document.querySelector('.js-close-menu');
   const mobileMenuLinks = document.querySelectorAll('.mobile-menu_link');
   const signUpButton = document.getElementById('sign-up');
+  const themeSwitch = document.getElementById('theme-switch');
 
   signUpButton.addEventListener('click', openModalAuth);
+  themeSwitch.addEventListener('change', handleThemeToggle);
 
   const toggleMenu = () => {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -50,8 +53,13 @@ import { ModalAuth } from './modal-auth.js';
   const logoutButton = document.querySelector('.log-btn.hidden');
   logoutButton.addEventListener('click', updateUIOnLogout);
 
-  // Use the ModalAuth function
+  // ModalAuth function
   function openModalAuth() {
     ModalAuth();
+  }
+
+  // Theme toggle handler
+  function handleThemeToggle() {
+    handleThemeToggle();
   }
 })();
