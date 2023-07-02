@@ -1,4 +1,8 @@
-import { fetchCategoryList, fetchTopBooks, fetchCertainCategory } from "./api_request";
+import {
+  fetchCategoryList,
+  fetchTopBooks,
+  fetchCertainCategory,
+} from './api_request';
 import Notiflix from 'notiflix';
 
 const categoryEl = document.querySelector('.category-list');
@@ -8,18 +12,19 @@ const h1El = document.querySelector('.title-category');
 allCategorys();
 
 async function allCategorys() {
+
   await fetchTopBooks().then((topBooks) => {
     topBooks.map((books) =>
       renderTopBooks(books))
   });
 };
 
+
 addCategorys();
 
 async function addCategorys() {
-  await fetchCategoryList()
-    .then((categorys) => renderCategorys(categorys));
-};
+  await fetchCategoryList().then(categorys => renderCategorys(categorys));
+}
 
 function renderCategorys(arr) {
   const markup = arr
@@ -30,8 +35,8 @@ function renderCategorys(arr) {
             </li>
       `;
     })
-    .join("");
-  categoryEl.insertAdjacentHTML("beforeend", markup);
+    .join('');
+  categoryEl.insertAdjacentHTML('beforeend', markup);
 }
 
 categoryEl.addEventListener('click', onSelectCategory);
@@ -47,7 +52,8 @@ function onSelectCategory(evt) {
   h1El.innerHTML = ` <h1 class="title-category"> ${AllTitle.join(" ")} <span class="title-secondary">${lastWorld}</span></h1>`;
 
   fetchCertainCategory(category)
-    .then((books) => {
+
+     .then((books) => {
 
       renderBooks(books)
 
@@ -57,11 +63,14 @@ function onSelectCategory(evt) {
 
     });
 
+
 }
 
 function renderBooks(arr) {
   const markup = arr
+
     .map(({ book_image, author, title, _id }) => {
+
       return `
       <a href="#" class="book-card" id="${_id}">
         <div class="book-carts">
@@ -74,13 +83,14 @@ function renderBooks(arr) {
       </a>
       `;
     })
-    .join("");
+    .join('');
   booksCategoryEl.innerHTML = markup;
 }
 
 function renderTopBooks(arr) {
 
   const markupBook = arr
+
     .map(({ book_image, title, author, list_name }) => {
       return `
       
@@ -95,6 +105,7 @@ function renderTopBooks(arr) {
         
       `;
     })
+
    ;
   const markupBtn = `<button>see more</button>`;
   const screenWidth = window.screen.width;
@@ -115,6 +126,7 @@ function renderTopBooks(arr) {
   //  markup = markupBook + markupBtn;
 
   return booksCategoryEl.insertAdjacentHTML('beforeend', markup);
+
 
 }
 
