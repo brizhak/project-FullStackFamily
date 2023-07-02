@@ -1,47 +1,35 @@
-import "./category";
-import "./modal-window";
-import { fetchSelectedBook } from "./api_request";
+import './category';
+import './modal-window';
+import { fetchSelectedBook } from './api_request';
 import Notiflix from 'notiflix';
 let modalBodyCard = document.querySelector('.modal-body-card');
 const booksCategoryEl = document.querySelector('.books-category');
 
-
-
-booksCategoryEl.addEventListener("click", onSelectBook);
-
-
+booksCategoryEl.addEventListener('click', onSelectBook);
 
 function onSelectBook(evt) {
-    let touchTagA = evt.target.closest('a');
+  let touchTagA = evt.target.closest('a');
 
-    if (!touchTagA) return;
+  if (!touchTagA) return;
 
-    if (!booksCategoryEl.contains(touchTagA)) return;
+  if (!booksCategoryEl.contains(touchTagA)) return;
 
-    console.log(touchTagA.id);
+  console.log(touchTagA.id);
 
-    getBook(touchTagA.id);
-
+  getBook(touchTagA.id);
 }
-
-
 
 async function getBook(id) {
-    try {
-        let book = await fetchSelectedBook(id);
-        renderSelectedBook(book);
-
-    } catch (error) {
-        Notiflix.Notify.failure('Something went wrong. Please try again');
-    }
+  try {
+    let book = await fetchSelectedBook(id);
+    renderSelectedBook(book);
+  } catch (error) {
+    Notiflix.Notify.failure('Something went wrong. Please try again');
+  }
 }
 
-
-
-
 function renderSelectedBook(book) {
-
-    const markup = `
+  const markup = `
         <div class="modal-body-image">
             <img
                 src="${book.book_image}"
@@ -122,7 +110,5 @@ function renderSelectedBook(book) {
             </ul>
         </div>`;
 
-    console.log(markup);
-
+  console.log(markup);
 }
-
