@@ -72,21 +72,41 @@ function renderBooks(arr) {
 }
 
 function renderTopBooks(arr) {
-  const markup = arr
-    .map(({ book_image, title, author, list_name}) => {
+  const markupBook = arr
+    .map(({ book_image, title, author, list_name }) => {
       return `
-      <div class="book-carts"> 
+      
+      <li class="book-carts"> 
       <p>${list_name}</p>
       <img src="${book_image}" alt="${title}" class="book-img">
       <div class="book-title"> 
       <p>${title}</p>
         <p>${author}</p>
         </div>
-        </div>
-         <button>see more</button>
+        </li>
+        
       `;
     })
-    .join("");
-  booksCategoryEl.innerHTML = markup;
-  
+   ;
+  const markupBtn = `<button>see more</button>`;
+  const screenWidth = window.screen.width;
+  const markupMobile = markupBook.slice(0, 1).join("");
+  const markupLaptop = markupBook.slice(0, 3).join("");
+  const markupDesktop = markupBook.slice(0, 5).join("");
+  console.log(markupLaptop);
+  let markup = '';
+  if (screenWidth < 767) {
+    
+    markup = `<ul class="category-item-list">${markupMobile} + ${markupBtn}</ul>`;
+  }else if (screenWidth < 1440 && screenWidth>=768) {
+    
+    markup = `<ul class="category-item-list">${markupLaptop} + ${markupBtn}</ul>`;
+  } else {
+     markup = `<ul class="category-item-list">${markupDesktop} + ${markupBtn}</ul>`;
+  }
+  //  markup = markupBook + markupBtn;
+
+  return booksCategoryEl.insertAdjacentHTML('beforeend', markup);
+
 }
+
