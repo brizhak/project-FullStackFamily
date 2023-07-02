@@ -111,7 +111,7 @@ function renderTopBooks(arr) {
             <p class="best-sellers-title">${list_name}</p>
             <ul class="best-sellers-own-category-books">
                 <li class="best-sellers-book">
-                    <a href="#"> <img src="${book_image}" alt="${title}" class="book-img">
+                    <a href="#" id="${_id}"> <img src="${book_image}" alt="${title}" class="book-img">
                         <div class="book-title"> 
                         <p>${title}</p>
                         <p class="book-author">${author}</p>
@@ -131,7 +131,7 @@ function renderTopBooks(arr) {
   const markupMobile = markupBook.slice(0, 1).join("");
   const markupLaptop = markupBook.slice(0, 3).join("");
   const markupDesktop = markupBook.slice(0, 5).join("");
-  
+
   let markup = '';
   if (screenWidth < 767) {
     markup = `<ul class="category-item-list">${markupMobile}  ${markupBtn}</ul>`;

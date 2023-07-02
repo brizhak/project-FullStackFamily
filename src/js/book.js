@@ -3,6 +3,9 @@ import './modal-window';
 import { fetchSelectedBook } from './api_request';
 import Notiflix from 'notiflix';
 import { openModal } from './modal-window';
+import amazon from '../img/shopping/amazon.png';
+import apple from '../img/shopping/apple.png';
+import bookshop from '../img/shopping/bookshop.png';
 
 let modalBodyCard = document.querySelector('.modal-body-card');
 const booksCategoryEl = document.querySelector('.books-category');
@@ -60,16 +63,12 @@ function renderSelectedBook(book) {
                     aria-label="Amazon"
                     class="modal-body-logo-link"
                 >
-                    <picture>
-                    <source srcset="./img/shopping/amazon.png" type="image/png" />
                     <img
                         class="modal-body-media-icon-amazon"
-                        src="./img/shopping/amazon.png"
-                        alt="Amazon logo"
-                        width="32"
-                        height="11"
-                    />
-                    </picture>
+                        srcset="${amazon}";
+                        src="${amazon}";
+                        alt="Amazon shop"
+                        />
                 </a>
                 </li>
                 <li class="modal-body-logo-item">
@@ -80,16 +79,13 @@ function renderSelectedBook(book) {
                     aria-label="Apple Books"
                     class="modal-body-logo-link"
                 >
-                    <picture>
-                    <source srcset="./img/shopping/apple.png" type="image/png" />
                     <img
-                        class="modal-body-media-icon"
-                        src="./img/shopping/apple.png"
-                        alt="Apple book logo"
-                        width="16"
-                        height="16"
-                    /> </picture
-                ></a>
+                        class="modal-body-media-icon-apple"
+                        srcset="${apple}";
+                        src="${apple}";
+                        alt="Apple logo"
+                        />
+                </a>
                 </li>
                 <li class="modal-body-logo-item">
                 <a
@@ -99,19 +95,13 @@ function renderSelectedBook(book) {
                     aria-label="Bookshop"
                     class="modal-body-logo-link"
                 >
-                    <picture>
-                    <source
-                        srcset="./img/shopping/bookshop.png"
-                        type="image/png"
-                    />
-                    <img
-                        class="modal-body-media-icon"
-                        src="./img/shopping/bookshop.png"
-                        alt="Book shop logo"
-                        width="16"
-                        height="16"
-                    /> </picture
-                ></a>
+                   <img
+                        class="modal-body-media-icon-shop"
+                        srcset="${bookshop}";
+                        src="${bookshop}";
+                        alt="Bookshop logo"
+                        /> 
+                </a>
                 </li>
             </ul>
         </div>`;
