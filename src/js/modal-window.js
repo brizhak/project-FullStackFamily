@@ -1,6 +1,6 @@
-const MODAL_TEMPLATE = `<div class="modal-wrapper">
-    <div class="modal-backdrop"></div>
-    <div class="modal-body">
+const MODAL_TEMPLATE = `
+    <div class="overlay"></div>
+    <div class="modal-body modal">
       <div class="modal-body-btn">
         <button type="button" class="modal-close-btn">
           <svg class="icon-close" width="24" height="24">
@@ -98,14 +98,44 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
           </button>
         </div>
       </div>
-    </div>
-  </div>`;
+    </div>`;
 
-let bodyEl = document.getElementById('root');
-let openModal = document.getElementById('openBtn');
+const bodyEl = document.querySelector('#root');
+const openModal = document.getElementById('openBtn');
+
+// function openModalWindow() {
+//   bodyEl.insertAdjacentHTML('afterbegin', MODAL_TEMPLATE);
+// }
+
+openModal.addEventListener('click', openModalWindow);
+
 
 function openModalWindow() {
   bodyEl.insertAdjacentHTML('afterbegin', MODAL_TEMPLATE);
+  const overlayAd = document.querySelector('.overlay');
+  const modalAd = document.querySelector('.modal');
+  
+  modalAd.classList.add('active');
+  overlayAd.classList.add('active');
+  overlayAd.addEventListener('click', closeModal);
+  }
+  
+function closeModal() {
+  const overlayAd = document.querySelector('.overlay');
+  const modalAd = document.querySelector('.modal');
+  overlayAd.removeEventListener('click', closeModal);
+  modalAd.classList.remove('active');
+  overlayAd.classList.remove('active');
+  
+  
 }
 
-openModal.addEventListener('click', openModalWindow);
+  document.body.addEventListener('keyup', function (e) {
+    const key = e.keyCode;
+    
+    if (key === 27) {
+
+      document.querySelector('.modal.active').classList.remove('active');
+      document.querySelector('.overlay.active').classList.remove('active');
+    };
+  });

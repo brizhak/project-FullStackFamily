@@ -8,12 +8,12 @@
 }
 
 .modal-backdrop {
-  z-index: 999;
+  /* z-index: 999; */
   background-color: rgba(165, 42, 42, 0.848);
 }
 
 .modal-body {
-  position: relative;
+  /* position: relative; */
   margin: auto;
 
   max-width: 335px;
@@ -22,7 +22,7 @@
   border-radius: 18px;
   border: 2px solid black;
   background-color: white;
-  z-index: 1000;
+  /* z-index: 1000; */
 }
 
 .modal-close-btn {
