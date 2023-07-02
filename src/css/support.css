@@ -4,13 +4,12 @@
 }
 
 .funds-container {
-  width: 375px;
   padding-inline: 20px;
   margin: 0 auto;
 }
 
 .funds{
-  width: 100%;
+  width: 314px;
   border-radius: 16px;
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,#4f2ee8 18.03%,#fff 100%);
@@ -102,9 +101,9 @@
   fill: #fff;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (min-width: 375px) {
   .funds-container {
-    width: 100%;
+    width: 300px;
   }
   .funds-title {
     font-size: 25px;
@@ -119,6 +118,7 @@
   }
 
   .funds {
+    width: 335px;
     padding-bottom: 14px;
   }
 
@@ -134,7 +134,7 @@
 
 @media screen and (min-width: 1440px) {
   .funds-container {
-    width: 396px;
+    width: 356px;
   }
   .swiper-wrapper {
     margin-bottom: 40px;
