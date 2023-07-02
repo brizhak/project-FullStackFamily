@@ -8,9 +8,10 @@ const h1El = document.querySelector('.title-category');
 allCategorys();
 
 async function allCategorys() {
-await fetchTopBooks().then((topBooks) => {
-  topBooks.map(( books ) =>  
-    renderTopBooks(books))});
+  await fetchTopBooks().then((topBooks) => {
+    topBooks.map((books) =>
+      renderTopBooks(books))
+  });
 };
 
 addCategorys();
@@ -22,7 +23,7 @@ async function addCategorys() {
 
 function renderCategorys(arr) {
   const markup = arr
-    .map(({list_name}) => {
+    .map(({ list_name }) => {
       return `
       <li>
                 <a href="#" class="category-link">${list_name}</a>
@@ -39,32 +40,34 @@ function onSelectCategory(evt) {
   let category = evt.target.textContent;
   if (category === 'All categories') {
     allCategorys();
-}
+  }
 
   h1El.innerHTML = category;
   fetchCertainCategory(category)
     .then((books) => {
-      
+
       renderBooks(books)
-  
+
     }).catch((error) => {
       Notiflix.Notify.failure('Something went wrong. Please try again');
-     
+
     });
-    
+
 }
 
 function renderBooks(arr) {
   const markup = arr
-    .map(({book_image, author, title}) => {
+    .map(({ book_image, author, title, _id }) => {
       return `
-      <div class="book-carts"> 
-      <img src="${book_image}" alt="${title}" class="book-img" loading="lazy" width=335>
-      <div class="book-title"> 
-      <p>${title}</p>
-        <p>${author}</p>
+      <a href="#" class="book-card" id="${_id}">
+        <div class="book-carts">
+          <img src="${book_image}" alt="${title}" class="book-img" loading="lazy" width=335>
+            <div class="book-title">
+              <p>${title}</p>
+              <p>${author}</p>
+            </div>
         </div>
-        </div>
+      </a>
       `;
     })
     .join("");
@@ -73,20 +76,22 @@ function renderBooks(arr) {
 
 function renderTopBooks(arr) {
   const markup = arr
-    .map(({ book_image, title, author, list_name}) => {
+    .map(({ book_image, title, author, list_name, _id }) => {
       return `
-      <div class="book-carts"> 
-      <p>${list_name}</p>
-      <img src="${book_image}" alt="${title}" class="book-img">
-      <div class="book-title"> 
-      <p>${title}</p>
-        <p>${author}</p>
+      <a href="#" class="book-card" id="${_id}">
+        <div class="book-carts">
+          <p>${list_name}</p>
+          <img src="${book_image}" alt="${title}" class="book-img">
+          <div class="book-title">
+            <p>${title}</p>
+            <p>${author}</p>
+          </div>
         </div>
-        </div>
-         <button>see more</button>
+      </a>
+         <button class="see-more-btn">see more</button>
       `;
     })
     .join("");
   booksCategoryEl.innerHTML = markup;
-  
+
 }
