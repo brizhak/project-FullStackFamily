@@ -1,4 +1,14 @@
+import Notiflix from 'notiflix';
 const axios = require('axios').default;
+
+
+//Копіюйте собі ці імпорти якщо потрібнні запити (перевіряйте путі до свого файлу js)
+
+// import { fetchCategoryList } from './js/api_request';
+// import { fetchTopBooks } from './js/api_request';
+// import { fetchCertainCategory } from './js/api_request';
+// import { fetchSelectedBook } from './js/api_request';
+
 
 
 export async function fetchCategoryList() {
@@ -9,7 +19,8 @@ export async function fetchCategoryList() {
         return data;
 
     } catch (error) {
-        console.log(error);
+        Notiflix.Notify.failure('Something went wrong. Please try again');
+    } finally {
     }
 }
 
@@ -21,7 +32,7 @@ export async function fetchTopBooks() {
 
         return books;
     } catch (error) {
-        console.log(error);
+        Notiflix.Notify.failure('Something went wrong. Please try again');
     }
 }
 
@@ -35,7 +46,17 @@ export async function fetchCertainCategory(selectedCategory) {
         })
         return data;
     } catch (error) {
-        console.log(error);
+        Notiflix.Notify.failure('Something went wrong. Please try again');
     }
 }
 
+
+export async function fetchSelectedBook(bookId) {
+    try {
+        let resp = await axios.get(`https://books-backend.p.goit.global/books/${bookId}`)
+        let book = await resp.data;
+        return book;
+    } catch (error) {
+        Notiflix.Notify.failure('Something went wrong. Please try again');
+    }
+}
