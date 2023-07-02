@@ -9,4 +9,5 @@ import './js/shopping-list-section.js';
 import './js/category.js';
 import './js/support.js';
 import './js/scroll-up-btn.js';
+import './js/book.js'
 
