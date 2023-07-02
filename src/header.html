@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Shelf</title>
-    <link href="./index.css" rel="stylesheet">
-</head>
-
-<body>
     <header class="header">
         <div class="container">
             <div class="header-container">
@@ -16,8 +5,6 @@
                     <svg class="header_logo-icon" width="109" height="28">
                         <use href="./img/icons.svg#icon-logo"></use>
                     </svg>
-                    <!-- <span class="logo-name">Bookshelf</span>
-            </a> -->
                     <nav class="nav">
                         <ul class="nav-list">
                             <li class="nav-item">
@@ -32,7 +19,7 @@
                         </ul>
                         <div class="toggle-switch">
                             <span>
-                                <label class="switch" for="theme-switch">
+                                <label class="switch dark-mode-btn-active" for="theme-switch">
                                     <input id="theme-switch" type="checkbox">
                                     <span class="slider circle"></span>
                                 </label>
@@ -70,12 +57,21 @@
                     </a>
                 </li>
             </ul>
+            <button type="button" class="log-btn hidden">
+					<span>Log out</span>
+					<svg class="login-logout">
+						<use href="./img/icons.svg#icon-align-left"></use>
+					</svg>
+				</button>
+				<button type="button" class="log-btn singup" data-action="open-modal-autorization">
+					<span>Log in</span>
+					<svg class="login-logut">
+						<use href="./img/icons.svg#icon-align-left"></use>
+					</svg>
+				</button>
         </div>
         <img class="mobile-menu_img" src="./img/books-min.png" alt="books">
     </div>
-    <script src="./index.js" type="module"></script>
-</body>
 
-</html>
 
 
