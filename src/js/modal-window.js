@@ -3,7 +3,7 @@ let modalWrapper = document.querySelector('.modal');
 let modalOverlay = document.querySelector('.overlay');
 let closeModalBtn = document.querySelector('.modal-close-btn');
 
-function openModal() {
+export function openModal() {
   modalWrapper.classList.add('active');
   modalOverlay.classList.add('active');
 }
