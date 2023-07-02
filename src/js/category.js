@@ -42,13 +42,17 @@ function onSelectCategory(evt) {
     allCategorys();
   }
 
-  h1El.innerHTML = category;
+  let AllTitle = category.split(" ");
+  let lastWorld = AllTitle.pop();
+  h1El.innerHTML = ` <h1 class="title-category"> ${AllTitle.join(" ")} <span class="title-secondary">${lastWorld}</span></h1>`;
+
   fetchCertainCategory(category)
     .then((books) => {
 
       renderBooks(books)
 
     }).catch((error) => {
+      console.error(error);
       Notiflix.Notify.failure('Something went wrong. Please try again');
 
     });
@@ -64,7 +68,7 @@ function renderBooks(arr) {
           <img src="${book_image}" alt="${title}" class="book-img" loading="lazy" width=335>
             <div class="book-title">
               <p>${title}</p>
-              <p>${author}</p>
+              <p class="book-author">${author}</p>
             </div>
         </div>
       </a>
