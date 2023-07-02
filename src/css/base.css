@@ -35,7 +35,6 @@ body {
   }
 }
 
-/* Swiper */
 /* .swiper-wrapper {
   border-radius: 15px;
 }
@@ -70,7 +69,8 @@ body {
   border-radius: 6.5px;
   color: #fff;
   background: var(--accent-color);
-}
+} */
+
 .overlay {
   position: fixed;
   opacity: 0;
@@ -96,4 +96,4 @@ body {
 .overlay.active {
   opacity: 1;
   visibility: visible;
-} */
+}
