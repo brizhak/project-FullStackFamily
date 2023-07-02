@@ -112,7 +112,7 @@ function renderTopBooks(arr) {
 
   return booksCategoryEl.insertAdjacentHTML('beforeend', markup);
 
-
+}
 
 
 
