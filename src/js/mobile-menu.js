@@ -1,8 +1,13 @@
+import { ModalAuth } from './modal-auth.js';
+
 (() => {
   const mobileMenu = document.querySelector('.js-menu-container');
   const openMenuBtn = document.querySelector('.js-open-menu');
   const closeMenuBtn = document.querySelector('.js-close-menu');
   const mobileMenuLinks = document.querySelectorAll('.mobile-menu_link');
+  const signUpButton = document.getElementById('sign-up');
+
+  signUpButton.addEventListener('click', openModalAuth);
 
   const toggleMenu = () => {
     const isMenuOpen = openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -44,4 +49,9 @@
   // Додати слухача для кнопки "Logout"
   const logoutButton = document.querySelector('.log-btn.hidden');
   logoutButton.addEventListener('click', updateUIOnLogout);
+
+  // Use the ModalAuth function
+  function openModalAuth() {
+    ModalAuth();
+  }
 })();
