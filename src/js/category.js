@@ -103,22 +103,30 @@ function renderBooks(arr) {
 
 function renderTopBooks(arr) {
 
-  const markupBook = arr.map(({ book_image, title, author, list_name }) => {
+  const markupBook = arr.map(({ _id, book_image, title, author, list_name }) => {
     return `
-      <li class="book-carts"> 
-      <p>${list_name}</p>
-      <img src="${book_image}" alt="${title}" class="book-img">
-      <div class="book-title"> 
-      <p>${title}</p>
-        <p>${author}</p>
-        </div>
+     <div class="best-sellers-wraper">
+    <ul class="best-sellers-all-category-list">
+        <li class="best-sellers-own-category-list">
+            <p class="best-sellers-title">${list_name}</p>
+            <ul class="best-sellers-own-category-books">
+                <li class="best-sellers-book">
+                    <a href="#"> <img src="${book_image}" alt="${title}" class="book-img">
+                        <div class="book-title"> 
+                        <p>${title}</p>
+                        <p class="book-author">${author}</p>
+                        </div></a>
+                </li>
+            </ul>
         </li>
+    </ul>
+</div>
        
       `;
 
   });
 
-  const markupBtn = `<button>see more</button>`;
+  const markupBtn = `<button class="see-more">see more</button>`;
   const screenWidth = window.screen.width;
   const markupMobile = markupBook.slice(0, 1).join("");
   const markupLaptop = markupBook.slice(0, 3).join("");
@@ -126,11 +134,11 @@ function renderTopBooks(arr) {
   
   let markup = '';
   if (screenWidth < 767) {
-    markup = `<ul class="category-item-list">${markupMobile} + ${markupBtn}</ul>`;
+    markup = `<ul class="category-item-list">${markupMobile}  ${markupBtn}</ul>`;
   } else if (screenWidth < 1440 && screenWidth >= 768) {
-    markup = `<ul class="category-item-list">${markupLaptop} + ${markupBtn}</ul>`;
+    markup = `<ul class="category-item-list">${markupLaptop}  ${markupBtn}</ul>`;
   } else {
-    markup = `<ul class="category-item-list">${markupDesktop} + ${markupBtn}</ul>`;
+    markup = `<ul class="category-item-list">${markupDesktop}  ${markupBtn}</ul>`;
 
   }
   //  markup = markupBook + markupBtn;

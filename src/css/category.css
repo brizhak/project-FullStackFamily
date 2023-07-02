@@ -9,7 +9,7 @@ p {
     overflow-y: scroll;
     width: 335px;
     height: 228px;
-
+padding-top: 40px;
 }
 
 .categorys::-webkit-scrollbar {
@@ -86,7 +86,7 @@ p {
     font-weight: 700;
     line-height: 38px;
     letter-spacing: -1.28px;
-    margin-top: 40px;
+    margin-top: 0;
     margin-bottom: 40px;
 }
 
@@ -99,6 +99,8 @@ p {
     line-height: 18px;
     letter-spacing: -0.64px;
     text-transform: uppercase;
+    padding-top: 14px;
+        padding-bottom: 8px;
 }
 
 .book-author {
@@ -112,6 +114,44 @@ p {
     padding-top: 4px;
 }
 
+.best-sellers-title {
+    padding-bottom: 18px;
+    color: #B4AFAF;
+        font-size: 14px;
+        font-family: DM Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.42px;
+        text-transform: uppercase;
+}
+
+.category-item-list {
+    margin-bottom: 40px;
+}
+.see-more {
+    display: inline-flex;
+        padding: 14px 28px;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 40px;
+        border: 2px solid #4F2EE8;
+        margin-left: 200px;
+        color: #111;
+            font-size: 14px;
+            font-family: DM Sans;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: -0.14px;
+            text-transform: uppercase;
+
+}
+
+/* .best-sellers-own-category-list {
+    height: 600px;
+    overflow: hidden;
+} */
 /* tablet */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
 
@@ -148,7 +188,11 @@ p {
         height: 366px;
     }
 }
-
+/* .best-sellers-own-category-list {
+    width: 704px;
+    height: 340px;
+    flex-wrap: wrap;
+} */
 /* desktop */
 @media screen and (min-width: 1200px) {
     .wraper-category-desktop {
