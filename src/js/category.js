@@ -4,6 +4,8 @@ import {
   fetchCertainCategory,
 } from './api_request';
 import Notiflix from 'notiflix';
+import { showLoader, hideLoader } from './loader';
+
 
 const categoryEl = document.querySelector('.category-list');
 const booksCategoryEl = document.querySelector('.books-category');
@@ -13,17 +15,26 @@ allCategorys();
 
 async function allCategorys() {
 
-  await fetchTopBooks().then((topBooks) => {
-    topBooks.map((books) =>
-      renderTopBooks(books))
+  showLoader;
+
+  await fetchTopBooks().then(topBooks => {
+    topBooks.map(books => renderTopBooks(books));
   });
-};
+
+  hideLoader;
+}
 
 
 addCategorys();
 
 async function addCategorys() {
+
+  showLoader;
+
   await fetchCategoryList().then(categorys => renderCategorys(categorys));
+
+  hideLoader;
+
 }
 
 function renderCategorys(arr) {
@@ -47,22 +58,25 @@ function onSelectCategory(evt) {
     allCategorys();
   }
 
-  let AllTitle = category.split(" ");
+
+  let AllTitle = category.split(' ');
   let lastWorld = AllTitle.pop();
-  h1El.innerHTML = ` <h1 class="title-category"> ${AllTitle.join(" ")} <span class="title-secondary">${lastWorld}</span></h1>`;
+  h1El.innerHTML = ` <h1 class="title-category"> ${AllTitle.join(
+    ' '
+  )} <span class="title-secondary">${lastWorld}</span></h1>`;
+
+  showLoader();
 
   fetchCertainCategory(category)
-
-     .then((books) => {
-
-      renderBooks(books)
-
-    }).catch((error) => {
+    .then(books => {
+      renderBooks(books);
+      hideLoader();
+    })
+    .catch(error => {
       console.error(error);
       Notiflix.Notify.failure('Something went wrong. Please try again');
-
+      hideLoader();
     });
-
 
 }
 
@@ -89,11 +103,8 @@ function renderBooks(arr) {
 
 function renderTopBooks(arr) {
 
-  const markupBook = arr
-
-    .map(({ book_image, title, author, list_name }) => {
-      return `
-      
+  const markupBook = arr.map(({ book_image, title, author, list_name }) => {
+    return `
       <li class="book-carts"> 
       <p>${list_name}</p>
       <img src="${book_image}" alt="${title}" class="book-img">
@@ -102,11 +113,11 @@ function renderTopBooks(arr) {
         <p>${author}</p>
         </div>
         </li>
-        
+       
       `;
-    })
 
-   ;
+  });
+
   const markupBtn = `<button>see more</button>`;
   const screenWidth = window.screen.width;
   const markupMobile = markupBook.slice(0, 1).join("");
@@ -115,19 +126,16 @@ function renderTopBooks(arr) {
   
   let markup = '';
   if (screenWidth < 767) {
-    
     markup = `<ul class="category-item-list">${markupMobile} + ${markupBtn}</ul>`;
-  }else if (screenWidth < 1440 && screenWidth>=768) {
-    
+  } else if (screenWidth < 1440 && screenWidth >= 768) {
     markup = `<ul class="category-item-list">${markupLaptop} + ${markupBtn}</ul>`;
   } else {
-     markup = `<ul class="category-item-list">${markupDesktop} + ${markupBtn}</ul>`;
+    markup = `<ul class="category-item-list">${markupDesktop} + ${markupBtn}</ul>`;
+
   }
   //  markup = markupBook + markupBtn;
 
   return booksCategoryEl.insertAdjacentHTML('beforeend', markup);
 
 }
-
-
 
