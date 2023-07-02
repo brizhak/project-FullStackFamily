@@ -4,8 +4,11 @@
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  position: relative;
-  margin-top: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0;
   text-indent: -9999em;
   animation: mulShdSpin 1.3s infinite linear;
   transform: translateZ(0);

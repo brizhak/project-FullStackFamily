@@ -1,3 +1,4 @@
+
 const MODAL_TEMPLATE = `
     <div class="overlay"></div>
     <div class="modal-body modal">
@@ -139,3 +140,4 @@ function closeModal() {
       document.querySelector('.overlay.active').classList.remove('active');
     };
   });
+
