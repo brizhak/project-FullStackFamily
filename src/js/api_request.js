@@ -1,6 +1,7 @@
 import Notiflix from 'notiflix';
 const axios = require('axios').default;
 
+
 //Копіюйте собі ці імпорти якщо потрібнні запити (перевіряйте путі до свого файлу js)
 
 // import { fetchCategoryList } from './js/api_request';
@@ -19,6 +20,7 @@ export async function fetchCategoryList() {
 
     } catch (error) {
         Notiflix.Notify.failure('Something went wrong. Please try again');
+    } finally {
     }
 }
 
@@ -55,6 +57,6 @@ export async function fetchSelectedBook(bookId) {
         let book = await resp.data;
         return book;
     } catch (error) {
-        console.log(error)
+        Notiflix.Notify.failure('Something went wrong. Please try again');
     }
 }

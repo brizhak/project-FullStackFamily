@@ -1,79 +1,77 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Shelf</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
     <header class="header">
-    <div class="container">
-        <div class="header-container">
-            <a class="header-logo" href="./index.html">
-                <svg class="header_logo-icon" width="109" height="28">
-                <use href="./img/icons.svg#icon-logo"></use>
-                </svg>
-                <!-- <span class="logo-name">Bookshelf</span>
-            </a> -->
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item">
-                    <a class="nav-link" href="/src/index.html">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/src/shopping-list.html">SHOPPING LIST</a>
-                    <svg class="nav-link-icon" width="20" height="20">
-                    <use href="/src/img/icons.svg#icon-lock"></use>
+        <div class="container">
+            <div class="header-container">
+                <a class="header-logo" href="./index.html">
+                    <svg class="header_logo-icon" width="109" height="28">
+                        <use href="./img/icons.svg#icon-logo"></use>
                     </svg>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./shopping-list.html">SHOPPING LIST</a>
+                                <svg class="nav-link-icon" width="20" height="20">
+                                    <use href="/src/img/icons.svg#icon-lock"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <div class="toggle-switch">
+                            <span>
+                                <label class="switch dark-mode-btn-active" for="theme-switch">
+                                    <input id="theme-switch" type="checkbox">
+                                    <span class="slider circle"></span>
+                                </label>
+                            </span>
+
+                            <a class="sign-up" id="header-signup" href="#">
+                                Sign up
+                                <svg class="arrow-right" width="20" height="20">
+                                    <use href="./img/icons.svg#icon-arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <button class="js-open-menu" id="btn-hamburger" aria-label="burger-menu">
+                            <svg class="button-hamburger is-open" width="28" height="28">
+                                <use href="./img/icons.svg#icon-align-left"></use>
+                            </svg>
+                        </button>
+                    </nav>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu js-menu-container visually-hidden">
+        <div class="container mobile-menu_container mobile-menu_thumb">
+            <ul class="mobile-menu_list">
+                <li class="mobile-menu_item">
+                    <a class="mobile-menu_link" href="./index.html">HOME</a>
+                </li>
+                <li class="mobile-menu_item">
+                    <a class="mobile-menu_link" href="./shopping-list.html">SHOPPING LIST
+                        <svg class="mobile-menu_icon" width="20" height="20">
+                            <use href="/src/img/icons.svg#icon-basket"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
-        <div class="toggle-switch">
-            <span>
-                <label class="switch" for="theme-switch">
-                    <input id="theme-switch" type="checkbox">
-                    <span class="slider circle"></span>
-                </label>
-            </span>
-
-            <a href="#" id="header-signup" class="sign-up">
-                Sign up
-                <svg class="arrow-right" width="20" height="20">
-          <use href="./img/icons.svg#icon-arrow-right"></use>
-        </svg>
-      </a>
-
-    </div>
+            <button type="button" class="log-btn hidden">
+					<span>Log out</span>
+					<svg class="login-logout">
+						<use href="./img/icons.svg#icon-align-left"></use>
+					</svg>
+				</button>
+				<button type="button" class="log-btn sign-up" data-action="open-modal-autorization">
+					<span>Log in</span>
+					<svg class="login-logut">
+						<use href="./img/icons.svg#icon-align-left"></use>
+					</svg>
+				</button>
         </div>
-        <button class="js-open-menu" id="btn-hamburger" aria-label="burger-menu">
-            <svg class="button-hamburger is-open" width="28" height="28">
-			<use href="./img/icons.svg#icon-align-left"></use>
-			</svg>
-        </button>
-        </nav>
-        </div>
+        <img class="mobile-menu_img" src="./img/books-min.png" alt="books">
     </div>
-</header>
-    <!-- Mobile Menu -->
-<div class="mobile-menu js-menu-container">
-    <div class="container mobile-menu_container mobile-menu_thumb">
-        <ul class="mobile-menu_list">
-            <li class="mobile-menu_item">
-                <a class="mobile-menu_link" href="./index.html">HOME</a>
-            </li>
-            <li class="mobile-menu_item">
-                <a class="mobile-menu_link" href="./shopping-list.html">SHOPPING LIST
-                <svg class="mobile-menu_icon" width="20" height="20">
-                <use href="/src/img/icons.svg#icon-basket"></use>
-                </svg>
-                </a>
-            </li>
-        </ul>
-</div>
-    <img class="mobile-menu_img" src="./img/books-min.png" alt="books">
-</div>
- <script type="module" src="./index.js"></script>
-  </body>
-</html>
+
 
 
