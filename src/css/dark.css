@@ -1,12 +1,9 @@
-dark-mode{
+.dark {
         --main-accent-color: #4F2EE8;
-            --secondary-accent-color: #EAC645;
-            --main-color: #B4AFAF;
-            ;
-            --secondary-color: #FFF;
-            ;
-            --main-bg-color: #202024;
-            ;
+        --secondary-accent-color: #EAC645;
+        --main-color: #B4AFAF;
+         --secondary-color: #202024;
+        --main-bg-color: #fff;
 }
 .slider{
     transform: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out,fill .3s ease-in-out, transform .3s ease-in-out;
@@ -18,85 +15,85 @@ transition: color .3s ease-in-out,
     fill .3s ease-in-out,
     transform .3s ease-in-out;
 }
-.dark  .dark-background {
-    background-color:var(--main-bg-color);
+  body {
+    background-color:var(--secondary-color);
 }
 
-.dark li {
-    color: var(--secondary-color);
+li {
+    color: var(--main-bg-color);
 }
 
 .dark .book-title {
-    color: var(--main-color);
+    color: var(--main-bg-color);
 }
 
-.dark h1,
-.dark h3 {
-    color:var(--secondary-color);
+ h1,
+ h3 {
+    color:var(--main-bg-color);
 }
-
-.dark .category-link:hover,
-.dar .category-link:focus {
+.category-link:hover,
+.category-link:focus {
     color: var(--secondary-accent-color);
 }
 
-.dark.category-list::-webkit-scrollbar-thumb {
-    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, var(--secondary-accent-color) 18.03%, var(--secondary-color) 100%);
+.category-list::-webkit-scrollbar-thumb {
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, var(--main-bg-color) 18.03%, var(--main-bg-color) 100%);
 }
 
-.dark.header-container{
-    background: var(--main-bg-color);
+.header-container{
+    background: var(--secondary-color);
 }
 
-.dark .logo-name,
-.dark .modal-close-btn {
+.header_logo-icon,
+.modal-close-btn {
     fill: var(--secondary-color);
 }
 
-.dark .shoppList,
-.dark .counterPoint {
-    color: var(--secondary-color);  
+.shopping-list-title,
+.shop-cart-title,
+.dar .shop-cart-description {
+    color: var(--main-bg-color);  
 }
 
-.dark .cardBodyMod {
+.modal-body {
     color: var(--secondary-color);
-    background-color: var(--main-bg-color);
+    background-color: var(--secondary-color);
     border: 2px solid var(--secondary-color);
 }
+.modal-body-add-btn {
+    color: var(--main-bg-color);
+}
+.modal-body-text{
+    color: var(--main-bg-color);
+}
 
+.icon-close {
+    fill: var(--main-bg-color);
+}
 
-.dark .closeBtnMod {
-    fill: var(--secondary-color);
+.amazon-icon{
+    filter: invert(98%) sepia() saturate(0%) hue-rotate(105deg) brightness(103%) contrast(102%);
+    fill: var(--main-bg-color);
 }
-.dark .titleCardMod {
-    color: var(--secondary-color);
-}
-.dark .descriptionCardMod {
-    color:  var(--secondary-color);
-}
-.dark .addShoppList {
-    color: var(--secondary-color);
-}
-.dark .imgMarketPlaceAmazon {
+.shop-cart-media:hover,
+.shop-cart-media:focus {
     filter: invert(98%) sepia() saturate(0%) hue-rotate(105deg) brightness(103%) contrast(102%);
 }
-.dark .imgMarketPlace:hover,
-.dark .imgMarketPlace:focus {
-    filter: invert(98%) sepia() saturate(0%) hue-rotate(105deg) brightness(103%) contrast(102%);
-}
-.dark .loader {
+.loader {
     border: 10px solid rgba(234, 198, 69, .6);
     border-left-color: var(--secondary-accent-color);
 }
 
-.dark .nav-link {
-    color: var(--secondary-color);
+.shop-cart-btn:hover {
+    color: var(--main-bg-color);
 }
-
 .dark .title-category {
-    color: var(--secondary-color);
+    color: var(--main-bg-color);
 }
 
-.dark .see_more {
-    color: var(--secondary-color);
+.see_more {
+    color: var(--main-bg-color);
+}
+.modal-backdrop{
+    background-color: rgba(17, 17, 17, 0.40);
 }
