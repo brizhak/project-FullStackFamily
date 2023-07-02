@@ -95,5 +95,5 @@ li {
     color: var(--main-bg-color);
 }
 .modal-backdrop{
-    background-color: rgba(17, 17, 17, 0.40);
+    background-color: rgba(27, 27, 27, 0.4);
 }
