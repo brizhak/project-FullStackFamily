@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Shelf</title>
-  <link rel="stylesheet" href="./index.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="apple-touch-icon" sizes="180x180" href="./public/apple-touch-icon.png">
+<!-- <link rel="android-chrome-512x512" sizes="512x512" href="./public/android-chrome-512x512.png">
+<link rel="android-chrome-192x192" sizes="192x192" href="./public/android-chrome-192x192.png"> -->
+<link rel="icon" type="image/png" sizes="32x32" href="./public/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./public/favicon-16x16.png">
+<!-- <link rel="manifest" href="./public/site.webmanifest"> -->
+<!-- <link rel="mask-icon" href="./public/safari-pinned-tab.svg" color="#5bbad5"> -->
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
 
-<body>
-  <header>
-    <include src="./header.html"></include>
-  </header>
-  <main>
-    <section class="categorys container">
-      <ul class="category-list">
-        <li>
-          <a href="#" class="category-link">All categories</a>
-        </li>
-      </ul>
+    <title>Book Shelf</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <include src="./header.html"></include>
+    </header>
+    <main>
+      <section class="categorys container">
+        <ul class="category-list">
+          <li>
+            <a href="#" class="category-link">All categories</a>
+          </li>
+        </ul>
       </div>
     </section>
     <section class="list-of-books container">
@@ -29,10 +38,10 @@
     <include src="./partials/shopping-list-section.html"></include>
     <include src="./partials/modal-window.html"></include>
 
-    <!-- <include src="./partials/shopping-list-section.html"></include> -->
-    <section>
-      <span class="loader is-hidden"></span>
-    </section>
+
+       <!-- <include src="./partials/shopping-list-section.html"></include> -->
+      <span id="loader" class="loader hide-loader" ></span>
+
 
   </main>
   <footer>
@@ -44,6 +53,7 @@
           </svg>
         </a>
       </div>
+
       <form class="footer-form" name="subscribe-form" autocomplete="off">
         <label class="subscribe-label" for="subscribe-mail">Get notified about new books</label>
         <div class="input-container">
@@ -54,6 +64,7 @@
     </div>
     <p class="footer-rights">&#169; 2023 Bookshelf / All rights reserved</p>
   </footer>
+  <include src="./partials/scroll-up.html"></include>
   <script type="module" src="./index.js"></script>
 </body>
 

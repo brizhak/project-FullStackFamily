@@ -1,7 +1,6 @@
-const loader = document.getElementById('loader');
+export const loader = document.getElementById('loader');
 
-// import { showLoader } from '../js/loader.js';
-// import { hideLoader } from '../js/loader.js';
+// import { showLoader, hideLoader, loader } from './loader';
 
 export function showLoader() {
   loader.classList.remove('hide-loader');

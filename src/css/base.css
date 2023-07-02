@@ -1,6 +1,6 @@
 :root {
-  --main-accent-color: #4F2EE8;
-  --secondary-accent-color: #EAC645;
+  --main-accent-color: #4f2ee8;
+  --secondary-accent-color: #eac645;
   --main-color: rgba(0, 0, 0, 0.6);
   --secondary-color: #111;
   --main-bg-color: #fff;
@@ -22,16 +22,16 @@ body {
   max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 auto
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .container {
-    max-width: 1200px;
+    max-width: 1440px;
   }
 }
 
