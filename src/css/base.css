@@ -1,11 +1,9 @@
 :root {
-  --black: #111111;
-  --black-light: #202024;
-  --blue: #4f2ee8;
-  --yellow: #eac645;
-  --white: #ffffff;
-
-  
+  --main-accent-color: #4f2ee8;
+  --secondary-accent-color: #eac645;
+  --main-color: rgba(0, 0, 0, 0.6);
+  --secondary-color: #111;
+  --main-bg-color: #fff;
 }
 
 html {
@@ -17,32 +15,23 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: var(--background-color);
+  background-color: var(--main-bg-color);
   font-family: 'DMSans', sans-serif;
-  padding-top: 62px;
 }
 .container {
   max-width: 375px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  body {
-    padding-top: 72px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .container {
-    max-width: 1200px;
-    padding-left: 32px;
-    padding-right: 32px;
+    max-width: 1440px;
   }
 }
 

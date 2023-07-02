@@ -6,6 +6,7 @@ import {
 import Notiflix from 'notiflix';
 import { showLoader, hideLoader } from './loader';
 
+
 const categoryEl = document.querySelector('.category-list');
 const booksCategoryEl = document.querySelector('.books-category');
 const h1El = document.querySelector('.title-category');
@@ -13,6 +14,7 @@ const h1El = document.querySelector('.title-category');
 allCategorys();
 
 async function allCategorys() {
+
   showLoader;
 
   await fetchTopBooks().then(topBooks => {
@@ -22,14 +24,17 @@ async function allCategorys() {
   hideLoader;
 }
 
+
 addCategorys();
 
 async function addCategorys() {
+
   showLoader;
 
   await fetchCategoryList().then(categorys => renderCategorys(categorys));
 
   hideLoader;
+
 }
 
 function renderCategorys(arr) {
@@ -53,6 +58,7 @@ function onSelectCategory(evt) {
     allCategorys();
   }
 
+
   let AllTitle = category.split(' ');
   let lastWorld = AllTitle.pop();
   h1El.innerHTML = ` <h1 class="title-category"> ${AllTitle.join(
@@ -71,12 +77,14 @@ function onSelectCategory(evt) {
       Notiflix.Notify.failure('Something went wrong. Please try again');
       hideLoader();
     });
+
 }
 
 function renderBooks(arr) {
   const markup = arr
 
     .map(({ book_image, author, title, _id }) => {
+
       return `
       <a href="#" class="book-card" id="${_id}">
         <div class="book-carts">
@@ -94,9 +102,9 @@ function renderBooks(arr) {
 }
 
 function renderTopBooks(arr) {
+
   const markupBook = arr.map(({ book_image, title, author, list_name }) => {
     return `
-      
       <li class="book-carts"> 
       <p>${list_name}</p>
       <img src="${book_image}" alt="${title}" class="book-img">
@@ -105,8 +113,9 @@ function renderTopBooks(arr) {
         <p>${author}</p>
         </div>
         </li>
-        
+       
       `;
+
   });
 
   const markupBtn = `<button>see more</button>`;
@@ -122,8 +131,11 @@ function renderTopBooks(arr) {
     markup = `<ul class="category-item-list">${markupLaptop} + ${markupBtn}</ul>`;
   } else {
     markup = `<ul class="category-item-list">${markupDesktop} + ${markupBtn}</ul>`;
+
   }
   //  markup = markupBook + markupBtn;
 
   return booksCategoryEl.insertAdjacentHTML('beforeend', markup);
+
 }
+

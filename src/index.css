@@ -1,39 +1,4 @@
 @import './css/common.css';
-<<<<<<< Updated upstream
-@import './css/styles.css';
-@import './css/mobile.css';
-@import './css/tablet.css';
-@import './css/desktop.css';
-
-@font-face {
-    font-family: 'DM Sans Regular';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/DMSans-Regular.ttf') format('truetype');
-}
-  
-@font-face {
-    font-family: 'DM Sans Italic';
-    font-weight: 400;
-    src: url('./fonts/DMSans-Italic.ttf') format('truetype');
-}
-  
-@font-face {
-    font-family: 'DM Sans Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url('./fonts/DMSans-Bold.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'DM Sans Medium';
-    font-style: normal;
-    font-weight: 500;
-    src: url('./fonts/DMSans-Medium.ttf') format('truetype');
-}
-
-
-=======
 @import './css/reset.css';
 @import './css/fonts.css';
 @import './css/base.css';
@@ -45,4 +10,3 @@
 @import './css/scroll-up.css';
 @import './css/footer.css';
 @import './css/loader.css';
->>>>>>> Stashed changes
