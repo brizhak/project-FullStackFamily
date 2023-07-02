@@ -30,5 +30,18 @@
   addMenuEventListeners();
 
   window.matchMedia('(min-width: 768px)').addEventListener('change', closeMenuOnOrientationChange);
-})();
 
+  // Оновити розмітку після виходу з системи
+  function updateUIOnLogout() {
+    const logoutButton = document.querySelector('.log-btn');
+    logoutButton.classList.add('hidden');
+
+    const loginButton = document.querySelector('.log-btn.singup');
+    loginButton.classList.remove('hidden');
+    loginButton.addEventListener('click', toggleMenu);
+  }
+
+  // Додати слухача для кнопки "Logout"
+  const logoutButton = document.querySelector('.log-btn.hidden');
+  logoutButton.addEventListener('click', updateUIOnLogout);
+})();

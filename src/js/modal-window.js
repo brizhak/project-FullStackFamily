@@ -1,3 +1,7 @@
+import amazon from '../img/shopping/amazon.png';
+import apple from '../img/shopping/apple.png';
+import bookshop from '../img/shopping/bookshop.png';
+
 const MODAL_TEMPLATE = `<div class="modal-wrapper">
     <div class="modal-backdrop"></div>
     <div class="modal-body">
@@ -8,24 +12,20 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
           </svg>
         </button>
       </div>
-      <div class="modal-body-card">
+      <div class="modal-body-card" value="${_id}>
         <div class="modal-body-image">
           <img
-            src="./img/template.jpg"
-            alt="#"
+            src="${book_image}"
+            alt="${title}"
             class="modal-body-image-poster"
             width="287"
             height="408"
           />
         </div>
         <div class="modal-body-about-book">
-          <h2 class="modal-body-title">HELLO BEAUTIFUL</h2>
-          <h3 class="modal-body-autor">Ann Napolitano</h3>
-          <p class="modal-body-text">
-            In a homage to Louisa May Alcott’s “Little Women,” a young man’s
-            dark past resurfaces as he gets to the know the family of his
-            college sweetheart.
-          </p>
+          <h2 class="modal-body-title">${title}</h2>
+          <h3 class="modal-body-author">${author}</h3>
+          <p class="modal-body-text">${list_name}</p>
         </div>
         <div class="modal-body-logo">
           <ul class="modal-body-logo-list">
@@ -37,16 +37,12 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
                 aria-label="Amazon"
                 class="modal-body-logo-link"
               >
-                <picture>
-                  <source srcset="./img/shopping/amazon.png" type="image/png" />
-                  <img
-                    class="modal-body-media-icon-amazon"
-                    src="./img/shopping/amazon.png"
-                    alt="Amazon logo"
-                    width="32"
-                    height="11"
-                  />
-                </picture>
+                <img
+      class="modal-body-media-icon-amazon"
+      srcset="${amazon}"
+      src="${amazon}";
+      alt="Amazon shop"
+    />
               </a>
             </li>
             <li class="modal-body-logo-item">
@@ -57,16 +53,12 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
                 aria-label="Apple Books"
                 class="modal-body-logo-link"
               >
-                <picture>
-                  <source srcset="./img/shopping/apple.png" type="image/png" />
-                  <img
-                    class="modal-body-media-icon"
-                    src="./img/shopping/apple.png"
-                    alt="Apple book logo"
-                    width="16"
-                    height="16"
-                  /> </picture
-              ></a>
+               <img
+      class="modal-body-media-icon-apple"
+      srcset="${apple}"
+      src="${apple}";
+      alt="Apple book logo"
+    /></a>
             </li>
             <li class="modal-body-logo-item">
               <a
@@ -76,19 +68,12 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
                 aria-label="Bookshop"
                 class="modal-body-logo-link"
               >
-                <picture>
-                  <source
-                    srcset="./img/shopping/bookshop.png"
-                    type="image/png"
-                  />
-                  <img
-                    class="modal-body-media-icon"
-                    src="./img/shopping/bookshop.png"
-                    alt="Book shop logo"
-                    width="16"
-                    height="16"
-                  /> </picture
-              ></a>
+               <img
+      class="modal-body-media-icon-shop"
+      srcset="${bookshop}"
+      src="${bookshop}";
+      alt="Bookshop logo"
+    /></a>
             </li>
           </ul>
         </div>
@@ -101,11 +86,32 @@ const MODAL_TEMPLATE = `<div class="modal-wrapper">
     </div>
   </div>`;
 
-let bodyEl = document.getElementById('root');
+let bodyEl = document.getElementById('modalId');
 let openModal = document.getElementById('openBtn');
 
 function openModalWindow() {
   bodyEl.insertAdjacentHTML('afterbegin', MODAL_TEMPLATE);
+  let closeButton = document.querySelector('.modal-close-btn');
+  let modalWrapper = document.querySelector('.modal-wrapper');
+  closeButton.addEventListener('click', closeModal);
+  modalWrapper.addEventListener('click', handleClickOutside);
+  document.addEventListener('keydown', handleKeyDown);
+}
+
+function closeModal() {
+  document.querySelector('.modal-wrapper').remove();
+}
+
+function handleKeyDown(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+
+function handleClickOutside(event) {
+  if (!event.target.closest('.modal-body')) {
+    closeModal();
+  }
 }
 
 openModal.addEventListener('click', openModalWindow);
